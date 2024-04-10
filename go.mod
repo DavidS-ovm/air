@@ -1,4 +1,5 @@
-module github.com/cosmtrek/air
+// work around lack of https://github.com/golang/go/issues/50278
+module github.com/DavidS-ovm/air
 
 go 1.22
 
