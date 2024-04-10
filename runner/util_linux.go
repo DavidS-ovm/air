@@ -46,8 +46,10 @@ func (e *Engine) startCmd(cmd string) (*exec.Cmd, io.ReadCloser, io.ReadCloser, 
 		if err != nil {
 			return nil, nil, nil, err
 		}
+		fmt.Println("Using No PTY")
 		return c, stdout, stderr, err
 	}
+	fmt.Println("Using PTY")
 	f, err := pty.Start(c)
 	return c, f, f, err
 }
